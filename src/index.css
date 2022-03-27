@@ -20,14 +20,19 @@ code {
 
 .container-header img {
   max-width: 540px;
-  max-height: 80px;
+  max-height: 82px;
 }
 
 header {
   position: fixed;
   margin: 0;
   width: 100%;
-  background-color: #ad135b;
+  background: linear-gradient(
+    180deg,
+    #f15a24 0%,
+    rgba(238, 58, 44, 0.91687) 69.27%,
+    rgba(253, 17, 17, 0.88) 100%
+  );
 }
 
 .chat-bot-container {
@@ -73,7 +78,7 @@ button {
   font-size: 24px;
   color: #ecd6e1;
   padding: 0.4rem;
-  background: #ad135b;
+  background: #f15a24;
   border: 2px solid #ecd6e1;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(103, 53, 78, 0.25),
@@ -85,8 +90,8 @@ button {
   margin: 0.6rem;
   padding: 0.4rem;
   font-size: 16px;
-  background: #ffe3e3;
-  border: 0.1px solid #ecd6e1;
+  background: rgba(255, 176, 142, 0.83);
+  border: 0.1px solid #f1f2cc;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(103, 53, 78, 0.25),
     inset -5px -20px 20px rgba(103, 53, 78, 0.08);
