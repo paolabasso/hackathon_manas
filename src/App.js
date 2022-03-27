@@ -9,19 +9,15 @@ function App() {
 
   const [session, setSession] = useState('');
 
-  const addMessage = (message, origin) => {
-    const msgs = [...messages];
-    msgs.push({ content: message, origin: origin });
-    setMessages(msgs);
-    console.log(msgs);
-  };
-
   const handleChangeContent = e => {
     setContent(e.target.value);
   };
 
   const sendMessage = async message => {
+    const msgs = [];
+    msgs.push({ content: message, origin: 'user' });
     const url = process.env.REACT_APP_URL_API;
+
     const res = await fetch(url, {
       method: 'POST',
       headers: {
@@ -32,7 +28,7 @@ function App() {
     });
 
     const { step, sessionId } = await res.json();
-    const msgs = [];
+
     msgs.push({
       content: step.question,
       origin: 'bot'
@@ -49,7 +45,6 @@ function App() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    addMessage(content, 'user');
     sendMessage(content);
     setContent('');
   };

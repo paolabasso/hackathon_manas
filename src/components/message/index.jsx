@@ -1,7 +1,7 @@
 const Message = ({message}) => {
   return ( 
     <div>
-      {message.content}
+      <strong>{message.origin}:</strong> {message.content}
     </div>
    );
 }
