@@ -21,7 +21,7 @@ function App() {
   };
 
   const sendMessage = async message => {
-    const url = 'http://localhost:3000';
+    const url = process.env.REACT_APP_URL_API;
     const res = await fetch(url, {
       method: 'POST',
       headers: {
