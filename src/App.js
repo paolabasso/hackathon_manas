@@ -86,7 +86,7 @@ function App() {
     <div className="chat-bot-container">
       <header className="container-header">
         <img
-          src="/assets/logoSafeSister.png"
+          src="/assets/logo_branca.png"
           alt="Logo do movimento Safe Sister"
         />
       </header>
