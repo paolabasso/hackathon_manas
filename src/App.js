@@ -95,11 +95,7 @@ function App() {
         {messages.map((msg, index) => (
           <Message key={index} message={msg} className="message-send" />
         ))}
-        <div
-          ref={el => {
-            messagesEnd = el;
-          }}
-        ></div>
+        <div style={{ height: '30vh' }} ref={el => { messagesEnd = el; }} />
       </div>
       {openedSession && (
         <form className="form-container" onSubmit={handleSubmit}>
